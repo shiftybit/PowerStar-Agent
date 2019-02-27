@@ -35,17 +35,23 @@
 			// 
 			// textBox1
 			// 
+			this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+			this.textBox1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textBox1.Location = new System.Drawing.Point(12, 12);
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
 			this.textBox1.ReadOnly = true;
+			this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBox1.Size = new System.Drawing.Size(776, 397);
 			this.textBox1.TabIndex = 0;
 			this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
 			// 
 			// button1
 			// 
+			this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.button1.Location = new System.Drawing.Point(713, 415);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
@@ -56,6 +62,8 @@
 			// 
 			// textBox2
 			// 
+			this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.textBox2.Location = new System.Drawing.Point(13, 417);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(694, 20);
@@ -71,7 +79,7 @@
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.textBox1);
 			this.Name = "Form1";
-			this.Text = "Form1";
+			this.Text = "PowerStar - Test Chassis";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();

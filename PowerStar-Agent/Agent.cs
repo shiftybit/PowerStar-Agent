@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
+using System.IO;
+using System.Reflection;
 
 namespace PowerStar_Agent
 {
@@ -32,6 +34,24 @@ namespace PowerStar_Agent
 				returnString += item.ToString();
 			}
 			return returnString;
+		}
+
+		public static void RunTest()
+		{
+			WriteLine("RunTest has been Run");
+		}
+
+		public static string GetFirstPowerShell()
+		{
+			var assembly = Assembly.GetExecutingAssembly();
+			var resourceName = assembly.GetManifestResourceNames().Single(str => str.EndsWith(".ps1"));
+			string result = "";
+			using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+			using (StreamReader reader = new StreamReader(stream))
+			{
+				result = reader.ReadToEnd();
+			}
+			return result;
 		}
 	}
 }

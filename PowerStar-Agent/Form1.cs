@@ -30,7 +30,10 @@ namespace PowerStar_Agent
 		}
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			Agent.Initialize();
+			Agent.Initialize(WriteLine);
+			var output = Agent.GetFirstPowerShell();
+			WriteLine(output);
+			textBox2.Focus();
 		}
 
 		private void TextBox1_TextChanged(object sender, EventArgs e)
